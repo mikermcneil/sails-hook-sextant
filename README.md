@@ -1,25 +1,27 @@
 # sails-hook-sextant  &nbsp;  [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/balderdashy/sails?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**Sextant** is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  It provides infrastructural freedom for big apps, while allowing you to continue to keep all of your source code in a single repo.  This keeps your production deployments simple, flexible, and conventionally attractive.
+**Sextant** is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  It provides the **infrastructural freedom** you need for a big app, while allowing you to leave all of your source code in a single repo.  This keeps your production deployments simple, flexible, _and_ conventionally attractive.
 
 
-### Use Case
+## Use Cases
 
-It's easy to keep your Sails.js backend in a single code base, even as you customize your deployment infrastructure:  you just deploy the _same application code_ on different servers!  You can still set up different clusters of servers, each of which handles specific groups of routes (either via deployment on different subdomains, or special rules at the load balancer), but this way, you don't have to touch your code or worry about maintaining any additional repos.
+Out of the box, it's easy to keep your Sails.js backend in a single codebase, even as you customize your deployment infrastructure:  just deploy the _same application code_ on different servers.  You can still set up different clusters of servers, each of which handles specific groups of routes (typically this is achieved either by binding separate subdomains for each logical cluster, or via special routing rules at the load balancer).
 
-You can do all of that _right now_-- Sextant just provides an extra layer of insurance by allowing you to restrict access to all but those routes you've explicitly enabled on a cluster-by-cluster basis.  This is useful for enacting finer-grained control over the infrastructure where your Sails app is deployed, without forcing you to bust the code apart into smaller, separate Sails apps.
+You can do all of that _right now_ with your Sails app-- Sextant just provides an _extra layer of insurance_ by allowing you to restrict access to all but those routes you've explicitly enabled on a cluster-by-cluster basis.  This is useful for enacting finer-grained control over the infrastructure where your Sails app is deployed, without forcing you to bust it apart into smaller apps, maintain additional repos, or make any hasty code changes.  Other than installing and configuring Sextant, frankly you shouldn't have to touch the code at all.
 
-> By the way, there's nothing wrong w/ breaking apart your app into smaller chunks, but it involves significant T&M overhead, introduces needless code changes, and can be hard to keep track of (especially when your team is still small, or if you're forgetful like me).
+> To be clear: there's absolutely _nothing architecturally wrong_ about breaking apart your app into smaller logical modules or microservices-- it's just that doing so involves significant T&M overhead, introduces needless code changes, and can be hard to keep track of (especially when your team is still small, or if you're forgetful like me).  Hence the motivation for this hook.
 
 
-### Installation &nbsp; [![NPM version](https://badge.fury.io/js/sails-hook-sextant.svg)](http://badge.fury.io/js/sails-hook-sextant)
+
+## Usage
+
+#### Installation &nbsp; [![NPM version](https://badge.fury.io/js/sails-hook-sextant.svg)](http://badge.fury.io/js/sails-hook-sextant)
 
 ```sh
 npm install sails-hook-sextant --save --save-exact
 ```
 
-
-### Usage
+#### Choosing a Cluster
 
 After installing this hook in your app, you can customize `sails.config.sextant.cluster`-- a string which identifies which cluster this process is deployed in
 (i.e. and therefore presumably currently running from).  To do so:
@@ -32,7 +34,7 @@ sails_sextant__cluster='marketingWebsite' sails lift
 Right off the bat, this does a whole lot of nothing.  But if you add a new configuration file (`sextant.js`) to your project's `config/` directory and configure a whitelist for the `marketingWebsite` cluster, then your new rules will be enforced the next time you lift your app.
 
 
-### Configuring Whitelists
+#### Configuring Whitelists
 
 You can configure one whitelist for each logical cluster, using any route address syntax supported by Sails.
 
@@ -93,7 +95,7 @@ If **ANY** of the whitelisted route addresses match an incoming request, it will
 Check out the [implementation of this hook](./index.js) for more details about this hook's behavior.
 
 
-### License
+## License
 
 MIT &copy; 2016 Mike McNeil
 
