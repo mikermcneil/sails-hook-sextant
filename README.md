@@ -2,6 +2,7 @@
 
 **Sextant** is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  It provides the **infrastructural freedom** you need for a big app, while allowing you to leave all of your source code in a single repo.  This keeps your production deployments simple, flexible, _and_ conventionally attractive.
 
+![screenshot of log output](http://i.imgur.com/vzA5C6H.png)
 
 ## Running Sails.js On a Custom Infrastructure
 
@@ -93,6 +94,8 @@ module.exports.sextant = {
 If **ANY** of the whitelisted route addresses match an incoming request, it will be allowed through; otherwise your app will respond with a `421: Misdirected Request` error.  Finally, note that if you don't specify a `cluster` config at all, incoming requests will not be restricted by this hook at all.
 
 Check out the [implementation of this hook](./index.js) for more details about this hook's behavior.
+
+For help deploying/scaling your Sails/Node application, check out [**Deployment**]((http://sailsjs.org/documentation/concepts/deployment) in the official docs or head over to [**Support**](http://sailsjs.org/support) for a list of addiional resources.
 
 
 ## License
