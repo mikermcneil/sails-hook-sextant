@@ -1,6 +1,7 @@
-# sails-hook-sextant
+# sails-hook-sextant  &nbsp;  [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/balderdashy/sails?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Sextant is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  It provides infrastructural freedom for big apps, while allowing you to continue to keep all of your source code in a single repo.  This keeps your production deployments simple, flexible, and conventionally attractive.
+**Sextant** is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  It provides infrastructural freedom for big apps, while allowing you to continue to keep all of your source code in a single repo.  This keeps your production deployments simple, flexible, and conventionally attractive.
+
 
 ### Use Case
 
@@ -92,16 +93,10 @@ If **ANY** of the whitelisted route addresses match an incoming request, it will
 Check out the [implementation of this hook](./index.js) for more details about this hook's behavior.
 
 
-
-### Support
-
-<h5>
-<a href="http://sailsjs.org"><img alt="Sails.js logo" src="http://balderdashy.github.io/sails/images/logo.png" title="Sails.js"/></a>
-</h5>  &nbsp;  [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/balderdashy/sails?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-
-
 ### License
 
 MIT &copy; 2016 Mike McNeil
 
+<h4>
+<a href="http://sailsjs.org"><img alt="Sails.js logo" src="http://balderdashy.github.io/sails/images/logo.png" title="Sextant (a hook for Sails.js)"/></a>
+</h4>
