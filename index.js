@@ -2,6 +2,7 @@
  * Module dependencies
  */
 
+var _ = require('lodash');
 var pathToRegexp = require('path-to-regexp');
 
 

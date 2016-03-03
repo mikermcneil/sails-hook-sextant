@@ -1,6 +1,6 @@
-# Sextant (`sails-hook-sextant`)
+# sails-hook-sextant
 
-A hook that whitelists routes in your Sails app based on its configuration.  Designed to enable more flexible (/playful & conventionally attractive?) production deployments.
+Sextant is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  Designed to enable more flexible (/playful & conventionally attractive?) production deployments.
 
 It's easy to keep your Sails.js backend in a single code base, even as you customize your deployment infrastructure:  you just deploy the same app on different servers!  This way, you can set up different clusters of servers, each of which handles specific groups of routes (either via deployment on different subdomains, or special rules at the load balancer)
 Sextant provides an extra layer of insurance by allowing you to prevent routes other than those you explicitly enable on a cluster-by-cluster basis.

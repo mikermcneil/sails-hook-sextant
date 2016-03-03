@@ -17,6 +17,7 @@
     "routing",
     "cluster",
     "sextant",
+    "security",
     "sails",
     "hook",
     "sails-hook"
