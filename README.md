@@ -3,7 +3,7 @@
 **Sextant** is a hook that whitelists particular routes in your Sails app based on your deployment configuration.  It provides the **infrastructural freedom** you need for a big app, while allowing you to leave all of your source code in a single repo.  This keeps your production deployments simple, flexible, _and_ conventionally attractive.
 
 
-## Sails.js On Custom Infrastructure
+## Running Sails.js on a Custom Infrastructure
 
 Out of the box, it's easy to keep your Sails.js backend in a single codebase, even as you customize your deployment infrastructure:  just deploy the _same application code_ on different servers.  You can still set up different clusters of servers, each of which handles specific groups of routes (typically this is achieved either by binding separate subdomains for each logical cluster, or via special routing rules at the load balancer).
 
