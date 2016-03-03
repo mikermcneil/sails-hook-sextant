@@ -100,8 +100,12 @@ module.exports = function sextant(sails) {
           // Otherwise, we'll respond with an error.
           else {
             // For our status code here, we use "421: Misdirected Request",
-            // since this request's failure to match against our whitelist has
-            // to do with the "authority" part of the URI (the subdomain).
+            // since this request's failure to match against our whitelist
+            // _usually_ has to do with the "authority" part of the URI (the subdomain).
+            //
+            // That said, status codes outside the standard 20*,30*,40*, and 50* canon
+            // are always a little arbitrary, so don't go writing a letter to mom about
+            // this or anything.
             //
             // See section 9.1.2 in RFC7540 for more information:
             //  • https://tools.ietf.org/html/rfc7540#page-66
