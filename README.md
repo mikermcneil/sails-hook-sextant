@@ -95,7 +95,7 @@ If **ANY** of the whitelisted route addresses match an incoming request, it will
 
 Check out the [implementation of this hook](./index.js) for more details about this hook's behavior.
 
-For help deploying/scaling your Sails/Node application, check out [**Deployment**]((http://sailsjs.org/documentation/concepts/deployment) in the official docs or head over to [**Support**](http://sailsjs.org/support) for a list of addiional resources.
+For help deploying/scaling your Sails/Node application, check out [**Deployment**](http://sailsjs.org/documentation/concepts/deployment) in the official docs or head over to [**Support**](http://sailsjs.org/support) for a list of addiional resources.
 
 
 ## License
