@@ -1,0 +1,37 @@
+{
+  "name": "sails-hook-sextant",
+  "version": "1.0.0",
+  "description": "A hook that whitelists routes in your Sails app based on its configuration.  Designed to enable more flexible (/playful & conventionally attractive?) production deployments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikermcneil/sails-hook-sextant.git"
+  },
+  "keywords": [
+    "multiple-deployments",
+    "multi-server",
+    "whitelist",
+    "routing",
+    "cluster",
+    "sextant",
+    "sails",
+    "hook",
+    "sails-hook"
+  ],
+  "author": "Mike McNeil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikermcneil/sails-hook-sextant/issues"
+  },
+  "homepage": "https://github.com/mikermcneil/sails-hook-sextant#readme",
+  "dependencies": {
+    "lodash": "3.10.1",
+    "path-to-regexp": "1.2.1"
+  },
+  "sails": {
+    "isHook": true
+  }
+}
