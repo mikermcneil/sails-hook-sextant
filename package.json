@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-sextant",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A hook that whitelists routes in your Sails app based on its configuration.  Designed to enable more flexible (/playful & conventionally attractive?) production deployments.",
   "main": "index.js",
   "scripts": {
